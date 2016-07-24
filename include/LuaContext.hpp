@@ -103,6 +103,15 @@ public:
     }
 
     /**
+     * Constructor to hook into an existing Lua state.
+     *
+     * @param L exisitng Lua state
+     */
+    explicit LuaContext(lua_State* L) : mState(L)
+    {
+    }
+
+    /**
      * Move constructor
      */
     LuaContext(LuaContext&& s) :
